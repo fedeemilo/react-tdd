@@ -2,5 +2,20 @@
 
 ## Insatalling dependencies:
 
-- Enzyme + Adapter + Jest: yarn add -D enzyme enzyme-adapter-react-16 jest jest-enzyme (can do it also with npm)
+```
+yarn add -D enzyme enzyme-adapter-react-16 jest jest-enzyme 
+```
 
+## Configure Enzyme adapter:
+
+#### **`setupTests.js`**
+```js
+import {configure} from 'enzyme'
+import EnzymeAdapter from 'enzyme-adapter-react-16'
+
+configure({
+  adapter: new EnzymeAdapter(),
+  disableLifecycleMethods: true
+})
+
+```
